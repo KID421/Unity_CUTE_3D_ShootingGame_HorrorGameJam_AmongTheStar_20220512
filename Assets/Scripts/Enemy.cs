@@ -120,6 +120,9 @@ namespace KID
             }
             else
             {
+                Vector3 posLook = traPlayer.position;
+                posLook.y = transform.position.y;
+                transform.LookAt(posLook);
                 ani.SetTrigger(parameterFire);
                 ShootBullet();
                 timerFire = 0;
